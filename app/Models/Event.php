@@ -30,4 +30,14 @@ class Event extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function photoSessions()
+    {
+        return $this->hasMany(PhotoSession::class);
+    }
+
+    public function generatedImages()
+    {
+        return $this->hasMany(GeneratedImage::class);
+    }
 }

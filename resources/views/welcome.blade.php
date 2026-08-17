@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AI Photo Booth</title>
+    <title>RupaVue</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -16,7 +16,7 @@
         <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
 
             <a href="/" class="text-2xl font-bold">
-                AI Photo Booth
+                RupaVue
             </a>
 
             <div class="flex items-center gap-4">
@@ -52,7 +52,7 @@
             <div class="max-w-3xl">
 
                 <p class="mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-indigo-400">
-                    Next Generation Event Photography
+                    Next Generation Of PhotoBooth
                 </p>
 
                 <h1 class="text-5xl font-extrabold leading-tight md:text-7xl">
