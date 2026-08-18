@@ -16,10 +16,6 @@ Route::get('/events', [EventController::class, 'index'])
     ->middleware('auth')
     ->name('events.index');
 
-Route::get('/gemini-test', [GeminiController::class, 'test'])
-    ->middleware('auth')
-    ->name('gemini.test');
-
 Route::get('/gemini-generate', [GeminiController::class, 'generateImage'])
     ->name('gemini.generate');
 
