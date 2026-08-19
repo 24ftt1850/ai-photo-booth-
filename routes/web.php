@@ -1,22 +1,30 @@
 <?php
 
-use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeminiController;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/photobooth', function () {
+    return view('photobooth.create');
+})->name('photobooth.create');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/photobooth/scene', function () {
+    return view('photobooth.scene');
+})->name('photobooth.scene');
 
-Route::get('/events', [EventController::class, 'index'])
-    ->middleware('auth')
-    ->name('events.index');
+Route::get('/photobooth/generate', function () {
+    return view('photobooth.generate');
+})->name('photobooth.generate');
 
-Route::get('/gemini-generate', [GeminiController::class, 'generateImage'])
-    ->name('gemini.generate');
+Route::post('/gemini-generate', [
+    GeminiController::class,
+    'generateImage'
+])->name('gemini.generate');
 
-require __DIR__.'/admin.php';
+Route::get('/photobooth/result', function () {
+    return view('photobooth.result');
+})->name('photobooth.result');
+
+Route::post(
+    '/gemini-generate',
+    [GeminiController::class, 'generateImage']
+)->name('gemini.generate');
